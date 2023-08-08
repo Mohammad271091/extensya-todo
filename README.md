@@ -27,7 +27,7 @@ When the admin logs in, they should be automatically redirected to /admin page, 
     -   [Prerequisites](#prerequisites)
     -   [Installation](#installation)
 -   [Usage](#usage)
--   [Contributing](#contributing)
+-   [RESTful API](#restful-api)
 
 ## Getting Started
 
@@ -82,11 +82,20 @@ These instructions will help you clone and set up the project on your local mach
     ```
 
 ## Usage
+
+## Users
 The following users are seeded to the database and can be directly used:
 - email: **mohammad@gmail.com** with password: **password1234** (admin)
 - email: **sara@gmail.com** with password: **password1234** (normal user)
 
 * Note: all other users in the database have the password **password1234**
 
+## Dashboards
+At login, the admin would be redirected to /admin page where he can add new tasks, update existing tasks, or delete them.
+The admin can also view all current users and send them real-time and **private** messages/notifications" 
 
+On the other hand, the normal user can only view the tasks, and should receive notifications corresponding to the CRUD operations by the admin, and if he/she receives a private message from the admin.
+
+*note: the notification has a reload icon for the page to refresh and view the up to date changes*
+## RESTful API
 
