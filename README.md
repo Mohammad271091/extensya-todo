@@ -27,7 +27,10 @@ When the admin logs in, they should be automatically redirected to /admin page, 
     -   [Prerequisites](#prerequisites)
     -   [Installation](#installation)
 -   [Usage](#usage)
+    - [Users](#users)
+    - [Dashboards](#dashboards)
 -   [RESTful API](#restful-api)
+    - [Endpoints](#endpoints)
 
 ## Getting Started
 
@@ -56,10 +59,11 @@ These instructions will help you clone and set up the project on your local mach
     ```
     composer install
     ```
+
 5. Install npm packages
     ```
     npm install
-    ```    
+    ```
 6. Migrate the database tables
     ```
     php artisan migrate
@@ -67,7 +71,7 @@ These instructions will help you clone and set up the project on your local mach
 7. Run the seeder commands for users and tasks tables
     ```
     php artisan db:seed --class=UserSeeder
-    ```        
+    ```
     and
     ```
     php artisan db:seed --class=TaskSeeder
@@ -75,8 +79,8 @@ These instructions will help you clone and set up the project on your local mach
 8. Start the artisan server
     ```
     php artisan serve
-    ```    
-9. Start the vite server    
+    ```
+9. Start the vite server
     ```
     npm run dev
     ```
@@ -84,18 +88,28 @@ These instructions will help you clone and set up the project on your local mach
 ## Usage
 
 ## Users
-The following users are seeded to the database and can be directly used:
-- email: **mohammad@gmail.com** with password: **password1234** (admin)
-- email: **sara@gmail.com** with password: **password1234** (normal user)
 
-* Note: all other users in the database have the password **password1234**
+The following users are seeded to the database and can be directly used:
+
+-   email: **mohammad@gmail.com** with password: **password1234** (admin)
+-   email: **sara@gmail.com** with password: **password1234** (normal user)
+
+*   Note: all other users in the database have the password **password1234**
 
 ## Dashboards
+
 At login, the admin would be redirected to /admin page where he can add new tasks, update existing tasks, or delete them.
-The admin can also view all current users and send them real-time and **private** messages/notifications" 
+The admin can also view all current users and send them real-time and **private** messages/notifications.
 
-On the other hand, the normal user can only view the tasks, and should receive notifications corresponding to the CRUD operations by the admin, and if he/she receives a private message from the admin.
+On the other hand, the normal user can only view the tasks, and should receive notifications corresponding to the CRUD operations by the admin, and also receive private messages if sent to them by the admin.
 
-*note: the notification has a reload icon for the page to refresh and view the up to date changes*
+_note: the notification has a reload icon for the page to refresh and view the up to date changes_
+
 ## RESTful API
+
+This API uses sanctum for managing authentication and endpoints.
+Only the admin can add new tasks, delete tasks, and update existing ones.
+While all the users can view all the tasks, or view a specific task.
+
+### Endpoints
 
