@@ -127,11 +127,13 @@ First step you need to do is to add your API token, open the **Authorization** t
 
 + to create a new task, use the following endpoint with a **POST** request and after adding the **task** and **description** in the request body.
 
-example: key: task =================> value: solve the homework
-         key: description ==========> value: this is a daily todo task
 ```
 localhost:8000/api/tasks/create
 ```
+example: 
+key: task ========> value: solve the homework
+
+key: description ========> value: this is a daily todo task
 
 + to delete a task, use the following endpoint with a **DELETE** request
 ```
