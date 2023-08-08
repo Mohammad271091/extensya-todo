@@ -53,7 +53,19 @@ These instructions will help you clone and set up the project on your local mach
 3. Create a database on your local machine and name it "todos" _or any other name, but make sure to change it accordingly in the .env file along with username and password_
 4. install composer packages
 
-```
-composer install
-```
+    ```
+    composer install
+    ```
+5. install npm packages
+    ```
+    npm install
+    ```    
+6. start the artisan server
+    ```
+    php artisan serve
+    ```    
+7. start the vite server    
+    ```
+    npm run dev
+    ```
 
