@@ -45,7 +45,8 @@ These instructions will help you clone and set up the project on your local mach
 
    ```bash
    git clone https://github.com/Mohammad271091/extensya-todo.git
-   
-   
+   ```
+2.    
+
    
 
