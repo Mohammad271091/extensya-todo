@@ -60,11 +60,23 @@ These instructions will help you clone and set up the project on your local mach
     ```
     npm install
     ```    
-6. start the artisan server
+6. migrate the database tables
+    ```
+    php artisan migrate
+    ```
+7. run the seeder commands for users and tasks tables
+    ```
+    php artisan db:seed --class=UserSeeder
+    ```        
+    and
+    ```
+    php artisan db:seed --class=TaskSeeder
+    ```
+8. start the artisan server
     ```
     php artisan serve
     ```    
-7. start the vite server    
+9. start the vite server    
     ```
     npm run dev
     ```
