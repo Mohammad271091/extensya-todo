@@ -46,7 +46,9 @@ These instructions will help you clone and set up the project on your local mach
    ```bash
    git clone https://github.com/Mohammad271091/extensya-todo.git
    ```
-2.    
+2. Navigate to the project folder and copy the .env file sent with the email
+3. Create a database on your local machine and name it "todos" *or any other name, but make sure to change it accordingly in the .env file along with username and password*   
+4.  
 
    
 
