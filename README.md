@@ -115,7 +115,7 @@ While all the users can view all the tasks, or view a specific task.
 ## Login
 - Open Postman (or your preferred API client)
 - The user (either admin or normal user) should login in order to access the api endpoints (*replace localhost:8000 with your local server address, this applies to all endpoints*)
-- Use the below endpoint to login 
+- Use the below endpoint to login with a **POST** request
     ```
     localhost:8000/api/tasks/login
     ```
@@ -131,9 +131,11 @@ First step you need to do is to add your API token, open the **Authorization** t
 localhost:8000/api/tasks/create
 ```
 example: 
+
 key: task ========> value: solve the homework
 
 key: description ========> value: this is a daily todo task
+
 
 + to delete a task, use the following endpoint with a **DELETE** request
 ```
@@ -141,3 +143,31 @@ localhost:8000/api/tasks/delete/{taskID}
 ```
 
 example: localhost:8000/api/tasks/delete/1 (this will delete the task with ID: 1)
+
+
++ to update an existing task, use the following endpoint with a **PUT** request and after filling the task and description in the request body similar to the create endpoint
+```
+localhost:8000/api/tasks/update/{taskID}
+```
+
+example: localhost:8000/api/tasks/update/2 (this will update the task with ID: 2 with the newly filled data (task and description))
+
+
++ to view a specific task, use the following endpoint with a **GET** request
+```
+    localhost:8000/api/tasks/view/{taskID}
+```
+
+example: localhost:8000/api/tasks/view/10 (this will view the task with ID: 10)
+
+
++ to view all tasks, use the following endpoint with a **GET** request
+```
+    localhost:8000/api/tasks
+```
+
+
+
+
+
+
