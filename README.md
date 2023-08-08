@@ -30,6 +30,7 @@ When the admin logs in, they should be automatically redirected to /admin page, 
     - [Users](#users)
     - [Dashboards](#dashboards)
 -   [RESTful API](#restful-api)
+    - [Login](#login)
     - [Endpoints](#endpoints)
 
 ## Getting Started
@@ -103,7 +104,7 @@ The admin can also view all current users and send them real-time and **private*
 
 On the other hand, the normal user can only view the tasks, and should receive notifications corresponding to the CRUD operations by the admin, and also receive private messages if sent to them by the admin.
 
-_note: the notification has a reload icon for the page to refresh and view the up to date changes_
+_Note: the notification has a reload icon for the page to refresh and view the up to date changes_
 
 ## RESTful API
 
@@ -111,5 +112,14 @@ This API uses sanctum for managing authentication and endpoints.
 Only the admin can add new tasks, delete tasks, and update existing ones.
 While all the users can view all the tasks, or view a specific task.
 
+## Login
+- Open Postman (or your preferred API client)
+- The user (either admin or normal user) should login in order to access the api endpoints (*replace localhost:8000 with your local server address, this applies to all endpoints*)
+- Use the below endpoint to login 
+    ```
+    localhost:8000/api/tasks/login
+    ```
+- In the **Body** tab, under **x-www-form-urlencoded** write your email and password (example: mohammad@gmail.com, password1234 to login as an admin)     
+- Now, you'll receive your API token as a response, copy it in order to use it with all your next API calls.
 ### Endpoints
 
