@@ -81,8 +81,10 @@ These instructions will help you clone and set up the project on your local mach
     npm run dev
     ```
 
-##Usage
+## Usage
 The following users are seeded to the database and can be directly used:
-    - email: **mohammad@gmail.com** with password: **password1234** (admin)
-    - email: **sara@gmail.com** with password: **password1234** (normal user)
+    -   [email: **mohammad@gmail.com** with password: **password1234** (admin)]
+    -   [email: **sara@gmail.com** with password: **password1234** (normal user)]
+
+    *Note: all other users in the database have the password **password1234** *
 
