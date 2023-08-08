@@ -172,7 +172,7 @@ example: localhost:8000/api/tasks/view/10 (this will view the task with ID: 10)
 In this project I've used the default laravel caching driver which is file caching.
 Caching here is used along with Laravel Observer in the following way:
 
-The user will fetch the to-do list from the server for the first time, and then it will be cached for 24hrs **unless** the admin add a new task, updates an existing task, or deletes a task; in this case
+The user will fetch the to-do list from the server for the first time, and then it will be cached for 24hrs **unless** the admin adds a new task, updates an existing task, or deletes a task; in this case
 the cache will be deleted, and the process repeats.
 
 This applies for both the web and the API calls, but it is not applied on the admin web page.
@@ -181,8 +181,9 @@ This applies for both the web and the API calls, but it is not applied on the ad
 ## Next Step
 This project is only meant to be a simplified demonstration for specific features, for example the following can be added to the project to make it more efficient:
 - Redis in-memory caching instead of the default file driver, which makes the website faster, more efficient, and more optimized
-- More optimized queries to the database, for example using query builder instead of Eloquent
-- Adding relations to add the functionality of each user managing their own to-do tasks
+- More optimized queries to the database, for example using query builder instead of Eloquent in some cases might be faster
+- Adding relations to add the functionality of each user to manage their own to-do tasks
 - Using Laravel resources with API endpoints to gain more control over them
-- Using token methods in the API controller to check for the token **abilities** "that for some reason didn't work for me" instead of using Auth facade. 
+- Using token methods in the API controller to check for the token **abilities** "that for some reason didn't work for me" instead of using Auth facade to check for the signed in user/token
+- Using Rate Limiter to throttle frequent requests to the open endpoints
 
