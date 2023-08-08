@@ -123,3 +123,19 @@ While all the users can view all the tasks, or view a specific task.
 - Now, you'll receive your API token as a response, copy it in order to use it with all your next API calls.
 ### Endpoints
 
+First step you need to do is to add your API token, open the **Authorization** tab, choose **Bearer Token**, and add paste your token there.
+
++ to create a new task, use the following endpoint with a **POST** request and after adding the **task** and **description** in the request body.
+
+example: key: task =================> value: solve the homework
+         key: description ==========> value: this is a daily todo task
+```
+localhost:8000/api/tasks/create
+```
+
++ to delete a task, use the following endpoint with a **DELETE** request
+```
+localhost:8000/api/tasks/delete/{taskID}
+```
+
+example: localhost:8000/api/tasks/delete/1 (this will delete the task with ID: 1)
