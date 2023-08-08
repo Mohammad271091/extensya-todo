@@ -51,20 +51,20 @@ These instructions will help you clone and set up the project on your local mach
 
 2. Navigate to the project folder and copy the .env file sent with the email
 3. Create a database on your local machine and name it "todos" _or any other name, but make sure to change it accordingly in the .env file along with username and password_
-4. install composer packages
+4. Install composer packages
 
     ```
     composer install
     ```
-5. install npm packages
+5. Install npm packages
     ```
     npm install
     ```    
-6. migrate the database tables
+6. Migrate the database tables
     ```
     php artisan migrate
     ```
-7. run the seeder commands for users and tasks tables
+7. Run the seeder commands for users and tasks tables
     ```
     php artisan db:seed --class=UserSeeder
     ```        
@@ -72,12 +72,17 @@ These instructions will help you clone and set up the project on your local mach
     ```
     php artisan db:seed --class=TaskSeeder
     ```
-8. start the artisan server
+8. Start the artisan server
     ```
     php artisan serve
     ```    
-9. start the vite server    
+9. Start the vite server    
     ```
     npm run dev
     ```
+
+##Usage
+The following users are seeded to the database and can be directly used:
+    - email: **mohammad@gmail.com** with password: **password1234** (admin)
+    - email: **sara@gmail.com** with password: **password1234** (normal user)
 
